@@ -4,6 +4,7 @@
   "homepage": "http://angel-barena.github.io/jest-enzyme-testing",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.2.0",
     "axios": "^0.18.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",

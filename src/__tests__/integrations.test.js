@@ -1,10 +1,14 @@
 import React from 'react';
-import {mount} from 'enzyme';
+//import {mount} from 'enzyme';
 import moxios from 'moxios';
 import Root from 'Root';
 import App from 'components/App';
 
+import { createMount } from '@material-ui/core/test-utils';
+let mount;
+
 beforeEach(()=>{
+    mount = createMount();
     moxios.install();
     moxios.stubRequest('https://jsonplaceholder.typicode.com/comments?postId=1', {
         status: 200,
@@ -16,6 +20,7 @@ beforeEach(()=>{
 });
 
 afterEach(()=>{
+    mount.cleanUp();
     moxios.uninstall();
 });
 
