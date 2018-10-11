@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/jest-enzyme-testing/precache-manifest.27b86146c0045a3c6c45470fe5e2ae05.js"
+  "/jest-enzyme-testing/precache-manifest.d70ca4cd5d1b4af167181ed2f90586b9.js"
 );
 
 workbox.clientsClaim();
