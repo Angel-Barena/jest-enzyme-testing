@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import Typography from '@material-ui/core/Typography';
 
 class CommentList extends Component {
 
@@ -20,6 +20,7 @@ class CommentList extends Component {
     render(){
         return(
             <Grid item xs={12} sm={12} md={4} >
+                <Typography variant="h4" align="center">Comment List</Typography>
                 <List>
                     {this.renderComments()}
                 </List>
