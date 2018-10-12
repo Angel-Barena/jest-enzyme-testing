@@ -1,9 +1,9 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
+import requireAuth from 'components/requireAuth';
 
 import Grid from '@material-ui/core/Grid';
-
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -58,8 +58,4 @@ class CommentBox extends Component {
     }
 }
 
-
-
-
-export default connect(null, actions) (CommentBox);
-//export default withStyles(styles)(connect(null, actions)(CommentBox))
+export default connect(null, actions) (requireAuth(CommentBox));
