@@ -9,7 +9,7 @@ export default (ChildComponent)=>{
             this.shouldNavigateAWay();
         }
 
-        //compoenet just rendered
+        //compoenet just re-rendered
         componentDidUpdate(){
             this.shouldNavigateAWay();
         }

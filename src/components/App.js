@@ -21,6 +21,10 @@ const StyledGrid = withStyles({
 
 class App extends Component{
 
+    componentDidMount(){
+        this.props.fetchComments();
+    }
+
     renderButton(){
         if(this.props.auth){
             return <Button onClick={()=>this.props.changeAuth(false)}>Sign Out</Button>
@@ -58,7 +62,9 @@ class App extends Component{
 };
 
 function mapStateToProps(state){
-    return {auth: state.auth}
+    return {
+        auth: state.auth
+    }
 }
 
 export default connect(mapStateToProps, actions)(App);
